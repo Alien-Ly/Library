@@ -1,16 +1,16 @@
 class Book:
-    def init(self, title, author, isbn):
+    def __init__(self, title, author, isbn):
         self.title = title
         self.author = author
         self.isbn = isbn
         self.is_borrowed = False
 
-    def str(self):
+    def __str__(self):
         status = "Borrowed" if self.is_borrowed else "Available"
         return f'Title: {self.title} -- Author: {self.author} -- ISBN: {self.isbn} [{status}]'
 
 class Member:
-    def init(self, name, gender, age):
+    def __init__(self, name, gender, age):
         self.name = name
         self.gender = gender
         self.age = age
@@ -20,7 +20,7 @@ class Member:
         return f'Name: {self.name} -- Age: {self.age} -- Books: {len(self.books_borrowed)}'
 
 class Library:
-    def init(self):
+    def __init__(self):
         self.books = []
         self.members = []
 
